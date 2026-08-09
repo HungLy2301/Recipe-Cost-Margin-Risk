@@ -1,0 +1,22 @@
+Ingredient_ID,Ingredient_Name,Unit,Cost_Per_Unit,Primary_Vendor,Category
+ING001,All-Purpose Flour,g,0.0022,Costco,Dry Goods
+ING002,Granulated Sugar,g,0.0018,Costco,Dry Goods
+ING003,Unsalted Butter,g,0.0088,Kroger,Dairy
+ING004,Large Eggs,ea,0.3,Kroger,Dairy
+ING005,Chocolate Chips,g,0.012,Costco,Dry Goods
+ING006,Brown Sugar,g,0.002,Costco,Dry Goods
+ING007,Vanilla Extract,ml,0.08,Kroger,Dry Goods
+ING008,Baking Soda,g,0.002,Kroger,Dry Goods
+ING009,Salt,g,0.001,Kroger,Dry Goods
+ING010,Lemons,ea,0.6,Kroger,Produce
+ING011,Powdered Sugar,g,0.003,Costco,Dry Goods
+ING012,Cocoa Powder,g,0.012,Costco,Dry Goods
+ING013,Bananas,ea,0.25,Kroger,Produce
+ING014,Milk,ml,0.0011,Kroger,Dairy
+ING015,Espresso Beans,g,0.025,Local Roaster,Dry Goods
+ING016,Black Tea Bags,ea,0.1,Costco,Dry Goods
+ING017,Blueberries,g,0.008,Kroger,Produce
+ING018,Baking Powder,g,0.004,Kroger,Dry Goods
+ING019,Chicken Breast,g,0.0088,Restaurant Depot,Protein
+ING020,Water,ml,0.0001,N/A,Free/Negligible
+ING021,Ice,g,0.0002,N/A,Free/Negligible
