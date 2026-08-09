@@ -1,0 +1,15 @@
+# Secrets — never commit an API key
+.env
+config.py
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Excel / Tableau temp files
+~$*.xlsx
+*.twbr
