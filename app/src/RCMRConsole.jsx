@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import Papa from "papaparse";
 import * as XLSX from "xlsx";
+import storage from "./storage.js";
 import {
   ResponsiveContainer,
   BarChart,
@@ -195,7 +196,7 @@ export default function RCMRConsole() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await window.storage.get(STORAGE_KEY, false);
+        const res = await storage.get(STORAGE_KEY, false);
         if (res && res.value) {
           const parsed = JSON.parse(res.value);
           if (parsed.ingredients) setIngredients(parsed.ingredients);
@@ -204,15 +205,15 @@ export default function RCMRConsole() {
         }
       } catch (e) {}
       try {
-        const res2 = await window.storage.get(SHOCK_KEY, false);
+        const res2 = await storage.get(SHOCK_KEY, false);
         if (res2 && res2.value) setShocks(JSON.parse(res2.value));
       } catch (e) {}
       try {
-        const res3 = await window.storage.get(HISTORY_KEY, false);
+        const res3 = await storage.get(HISTORY_KEY, false);
         if (res3 && res3.value) setPriceHistory(JSON.parse(res3.value));
       } catch (e) {}
       try {
-        const res4 = await window.storage.get(TABLEAU_KEY, false);
+        const res4 = await storage.get(TABLEAU_KEY, false);
         if (res4 && res4.value) setTableauUrl(JSON.parse(res4.value));
       } catch (e) {}
       setLoaded(true);
@@ -224,7 +225,7 @@ export default function RCMRConsole() {
     if (saveTimer.current) clearTimeout(saveTimer.current);
     saveTimer.current = setTimeout(async () => {
       try {
-        await window.storage.set(STORAGE_KEY, JSON.stringify({ ingredients, recipes, recipeIngredients }), false);
+        await storage.set(STORAGE_KEY, JSON.stringify({ ingredients, recipes, recipeIngredients }), false);
       } catch (e) {
         console.error("Save failed", e);
       }
@@ -236,7 +237,7 @@ export default function RCMRConsole() {
     if (!loaded) return;
     (async () => {
       try {
-        await window.storage.set(SHOCK_KEY, JSON.stringify(shocks), false);
+        await storage.set(SHOCK_KEY, JSON.stringify(shocks), false);
       } catch (e) {}
     })();
   }, [shocks, loaded]);
@@ -245,7 +246,7 @@ export default function RCMRConsole() {
     if (!loaded) return;
     (async () => {
       try {
-        await window.storage.set(HISTORY_KEY, JSON.stringify(priceHistory), false);
+        await storage.set(HISTORY_KEY, JSON.stringify(priceHistory), false);
       } catch (e) {}
     })();
   }, [priceHistory, loaded]);
@@ -254,7 +255,7 @@ export default function RCMRConsole() {
     if (!loaded) return;
     (async () => {
       try {
-        await window.storage.set(TABLEAU_KEY, JSON.stringify(tableauUrl), false);
+        await storage.set(TABLEAU_KEY, JSON.stringify(tableauUrl), false);
       } catch (e) {}
     })();
   }, [tableauUrl, loaded]);
@@ -282,9 +283,9 @@ export default function RCMRConsole() {
     setShocks({});
     setPriceHistory({});
     try {
-      await window.storage.delete(STORAGE_KEY, false);
-      await window.storage.delete(SHOCK_KEY, false);
-      await window.storage.delete(HISTORY_KEY, false);
+      await storage.delete(STORAGE_KEY, false);
+      await storage.delete(SHOCK_KEY, false);
+      await storage.delete(HISTORY_KEY, false);
     } catch (e) {}
     showToast("Reset to demo dataset.", "info");
   };
