@@ -9,9 +9,13 @@ tool that tells a small food business which of its recipes are quietly losing mo
 **Built by [Harry (Hung) Ly](https://github.com/hungly2301)** — Financial Economics
 (Math minor), Denison University — alongside a Risk Management & Compliance product
 management internship at JPMorgan Chase, June–August 2026.
+<img width="717" height="527" alt="Screenshot 2026-08-09 at 8 42 05 PM" src="https://github.com/user-attachments/assets/629e7f45-95aa-4720-86ae-def6460bb2e4" />
+<img width="1143" height="808" alt="Screenshot 2026-08-09 at 8 53 09 PM" src="https://github.com/user-attachments/assets/3e01b8c4-4ed9-418e-bd44-a9eaf324a95a" />
+<img width="514" height="414" alt="Screenshot 2026-08-09 at 8 54 04 PM" src="https://github.com/user-attachments/assets/43e8e855-c263-493e-8037-a0a1238969e6" />
 
 <!-- TODO: add a screenshot of the Overview tab here. Drag the image into this
-     file on github.com and GitHub will upload it and insert the link for you. -->
+     file on github.com and GitHub![Uploading Screenshot 2026-08-09 at 8.42.05 PM.png…]()
+ will upload it and insert the link for you. -->
 
 ---
 
@@ -45,8 +49,8 @@ Each stage is a real, independently shareable artifact rather than a throwaway s
 
 ## Links
 
-- **Tableau Public dashboard:** <!-- TODO: paste your public link -->
-- **Interactive React console:** <!-- TODO: paste deployed link, or write "source in /app — deployment planned" -->
+- **Tableau Public dashboard:** (https://public.tableau.com/views/RCMRDashBoard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- **Interactive React console:** https://hungly2301.github.io/Recipe-Cost-Margin-Risk/
 
 ## Repository layout
 
